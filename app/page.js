@@ -1,113 +1,157 @@
-import Image from "next/image";
+import React from 'react'
+import Image from 'next/image'
+import Campus1 from "@/public/img/Campus1.png"
+import Campus2 from "@/public/img/Campus2.png"
+import Campus3 from "@/public/img/Campus3.png"
+import libary from "@/public/img/libary.png"
+import playground from "@/public/img/playground.png"
+import food from "@/public/img/food.png"
+import user from "@/public/img/user.png"
+import Card1 from "@/app/component/homePageCard-1/Card1"
+import Card2 from "@/app/component/homePageCard-2/Card2"
+import Link from 'next/link'
+import Navbar from './component/navbar/Navbar'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+      <section className="header">
+        <Navbar />
+
+        <div className="text_box">
+          <h2>GET READY</h2>
+          <p id="headtext">TO DISCOVER CAMPUS</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit consequuntur corrupti sapiente aut porro
+            <br /> esse blanditiis in quae perspiciatis quo.
+          </p>
+          <a href="#" className="hero_btn">Visit Us To Know More</a>
         </div>
-      </div>
+      </section>
+      <section className="course">
+        <div className="PageBlock">
+          <div className="verticalLine"></div>
+          <div className="Clear"></div>
+        </div>
+        <h1>EXPLORE OUR 60+ <br /> MAJOR PROGRAMS</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <div className="row">
+          <div className="course-col">
+            <Card1 />
+          </div>
+          <div className="course-col">
+            <Card1 />
+          </div>
+          <div className="course-col">
+            <Card1 />
+          </div>
+        </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <section className="campus">
+        <div className="PageBlock">
+          <div className="verticalLine"></div>
+          <div className="Clear"></div>
+        </div>
+        <h1>TAKE OUR VIRTUAL TOUR</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <div className="row">
+          <div className="campus-col">
+            <Image src={Campus1}
+              alt=""
+            />
+            <div className="layer">
+              <h3>Islamabad</h3>
+            </div>
+          </div>
+          <div className="campus-col">
+            <Image src={Campus2}
+              alt=""
+            />
+            <div className="layer">
+              <h3>Faisalabad</h3>
+            </div>
+          </div>
+          <div className="campus-col">
+            <Image src={Campus3}
+              alt=""
+            />
+            <div className="layer">
+              <h3>Karachi</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="facilities">
+        <div className="PageBlock">
+          <div className="verticalLine"></div>
+          <div className="Clear"></div>
+        </div>
+        <h1>Our Facilities</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+        <div className="row">
+          <div className="facilities-col">
+            <Card2 tital="Best Libary" img={libary} />
+          </div>
+          <div className="facilities-col">
+            <Card2 tital="Athletics" img={playground} />
+          </div>
+          <div className="facilities-col">
+            <Card2 tital="Tasty and Healthy Food" img={food} />
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <section className="testimonials">
+        <div className="PageBlock">
+          <div className="verticalLine"></div>
+          <div className="Clear"></div>
+        </div>
+        <h1>What Our Student Says</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+        <div className="row">
+          <div className="testimonials-col">
+            <Image src={user}
+              alt=""
+            />
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi maiores in nostrum rerum voluptatem
+                praesentium veritatis alias omnis voluptate nisi aperiam, voluptatum quibusdam itaque a
+                deserunt. In quia repellat maxime.</p>
+              <h3>Student Name</h3>
+              <i className="fa fa-star"></i>
+              <i className="fa fa-star"></i>
+              <i className="fa fa-star"></i>
+              <i className="fa fa-star"></i>
+              <i className="fa fa-star"></i>
+            </div>
+          </div>
+          <div className="testimonials-col">
+            <Image src={user}
+              alt=""
+            />
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi maiores in nostrum rerum voluptatem
+                praesentium veritatis alias omnis voluptate nisi aperiam, voluptatum quibusdam itaque a
+                deserunt. In quia repellat maxime.</p>
+              <h3>Student Name</h3>
+              <i className="fa fa-star"></i>
+              <i className="fa fa-star"></i>
+              <i className="fa fa-star"></i>
+              <i className="fa fa-star"></i>
+              <i className="fa fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="cta">
+        <h1>GET READY FOR A BRIGHT FUTURE</h1>
+        <Link href="/Contect" className="hero_btn">CONTACT US</Link>
+      </section>
+    </div>
   );
 }
